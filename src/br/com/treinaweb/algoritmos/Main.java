@@ -1,12 +1,26 @@
 package br.com.treinaweb.algoritmos;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] numeros = new int[5];
-		numeros[0] = 22;
-		System.out.println(numeros[0]);
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		for (int i = 0; i < numeros.length; i++) {
+			System.out.printf("\nDigite o %dº número: ", (i + 1));
+			numeros[i] = entrada.nextInt();
+		}
+		
+		entrada.close();
+		
+		System.out.println("Números Digitados");
+		
+		for (int numero : numeros) {
+			System.out.println(numero);
+		}
 	}
 
 }
